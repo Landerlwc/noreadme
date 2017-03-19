@@ -1,0 +1,63 @@
+<div class="all">
+	<!-- 搜索栏 -->
+	<div class="a_toprow">
+		<a href="javascript:void(0)" class="a_return" ng-click="allCtrl.goBack();"></a>
+		<div class="a_topsearch" ng-click="allCtrl.goTo();">
+			<form>
+				<a href="javascript:void(0)">
+					<div class="a_modinp_hs">
+						<i class="a_sp_pic1"></i>
+						<input type="text" class="a_header_input" value="请输入关键字">
+					</div>
+				</a>
+			</form>
+		</div>
+	</div>
+	<!-- 分类 -->
+	<div class="a_filterbar">
+		<ul class="a_filterbar_menu">
+			<li class="a_alloldpri">
+				全部分类
+				<i></i>
+			</li>
+			<li class="a_alloldpri">
+				默认排序
+				<i></i>
+			</li>
+			<li class="a_alloldpri">
+				全部时间
+				<i></i>
+			</li>
+		</ul>
+	</div>
+	<!-- 内容主体 -->
+	<div class="a_main">
+		<ul>
+			<li ng-repeat="main in allCtrl.mains">
+				<a ng-href="#/shop/{{ main.id }}">
+					<div class="a_piaoInfo">
+						<div class="a_piaoArr">
+							<div class="a_piaoDate">{{ main.date }}</div>
+							<div class="a_piaoTime">{{ main.week }}<br>{{ main.time }}</div>
+						</div>
+						<div class="a_piaoInfocon">
+							<dl>
+								<dt class="a_piaoTit">{{ main.tit }}</dt>
+								<dd class="a_piaoDdrow">
+									<div class="a_piaoAddr">
+										<span class="a_piao_pic1"></span>
+										{{ main.addr }}
+									</div>
+								</dd>
+								<dd class="a_piaoPrice">
+									<div class="a_piao_pic2"></div>
+									<span class="a_piao_big">{{ main.price }}</span>起
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

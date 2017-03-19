@@ -1,0 +1,126 @@
+<div class="buy">
+	<!-- 搜索栏 -->
+	<div class="b_header">
+		<span class="b_header_box">
+			<a href="javascript:void(0)">
+				<div class="b_header_city">北京</div>
+			</a>
+		</span>
+		<div class="b_header_search" ng-click="buyCtrl.goTo2();">
+			<a href="javascript:void(0)">
+				<span class="b_modinp_hs">
+					<i class="sp_pic4"></i>
+					<input type="text" class="b_header_input" value="输入演出、艺人、场馆名称">
+				</span>
+			</a>
+		</div>
+	</div>
+	<!-- 轮播图 -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+        	<div class="swiper-slide">
+        		<a href="javascript:void(0)">
+        			<img src="http://images.ypiao.com/banner/2017/20170215171450995.jpg" alt="">
+        		</a>
+        	</div>
+        	<div class="swiper-slide">
+        		<a href="javascript:void(0)">
+        			<img src="http://images.ypiao.com/banner/2016/20161107205515682.jpg" alt="">
+        		</a>
+        	</div>
+        	<div class="swiper-slide">
+        		<a href="javascript:void(0)">
+        			<img src="http://images.ypiao.com/banner/2016/20161208112206984.png" alt="">
+        		</a>
+        	</div>
+        	<div class="swiper-slide">
+        		<a href="javascript:void(0)">
+        			<img src="http://images.ypiao.com/banner/2017/20170120115724928.png" alt="">
+        		</a>
+        	</div>
+        	<div class="swiper-slide">
+        		<a href="javascript:void(0)">
+        			<img src="http://images.ypiao.com/banner/2017/20170121195413760.png" alt="">
+        		</a>
+        	</div>
+    	</div>
+    	<div class="swiper-pagination"></div>
+	</div>
+	<!-- 导航栏 -->
+	<div class="b_nav">
+		<ul>
+			 <li ng-repeat=" item in buyCtrl.list" ng-click="buyCtrl.goTo1();">
+			 	<a href="javascript:void(0)">
+			 		<span class="b_nav_pic{{ item.num }}"></span>
+			 		<p>{{ item.name }}</p>
+			 	</a>
+			 </li>
+		</ul>
+	</div>
+	<!--空隔-->
+	<div class="b_greyhr"></div>
+	<!-- 人气 -->
+	<div class="b_ad">
+		<div class="b_ad_left">
+			<a href="javascript:void(0)" ng-click="buyCtrl.goTo1();">
+				<img src="http://images.ypiao.com/block/2017/20170215185928652.jpg" alt="">
+			</a>
+		</div>
+		<div class="b_ad_right">
+			<div class="b_ad_right_top">
+				<a href="javascript:void(0)" ng-click="buyCtrl.goTo1();">
+					<img src="./img/buy2.png" alt="">
+				</a>
+			</div>
+			<div class="b_ad_right_bottom">
+				<div class="b_ad_right_bottom1">
+					<a href="javascript:void(0)" ng-click="buyCtrl.goTo1();">
+						<img src="http://images.ypiao.com/block/2016/20160719141111584.png" alt="">
+					</a>
+				</div>
+				<div class="b_ad_right_bottom2">
+					<a href="javascript:void(0)" ng-click="buyCtrl.goTo1();">
+						<img src="http://images.ypiao.com/block/2016/20160531161926766.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!--空隔-->
+	<div class="b_greyhr"></div>
+	<!-- 主要内容 -->
+	<div class="b_main">
+		<a href="javascript:void(0)"  ng-click="buyCtrl.goTo1();">
+			<div class="b_main_title">
+				<h2>热门推荐<span>></span></h2>
+			</div>
+		</a>
+		<ul>
+		<li ng-repeat="main in buyCtrl.mains">
+			<a ng-href="#/shop/{{ main.id }}">
+				<div class="b_piaoInfo">
+					<div class="b_piaoArr">
+						<div class="b_piaoDate">{{ main.date }}</div>
+						<div class="b_piaoTime">{{ main.week }}<br>{{ main.time }}</div>
+					</div>
+					<div class="b_piaoInfocon">
+						<dl>
+							<dt class="b_piaoTit">{{ main.tit }}</dt>
+							<dd class="b_piaoDdrow">
+								<div class="b_piaoAddr">
+									<span class="b_piao_pic1"></span>
+									{{ main.addr }}
+								</div>
+							</dd>
+							<dd class="b_piaoPrice">
+								<div class="b_piao_pic2"></div>
+								<span class="b_piao_big">{{ main.price }}</span>起
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</a>
+		</li>
+		</ul>
+	</div>
+</div>

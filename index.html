@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>有票官网</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	</head>
+	<body>
+		<!-- 路由切换容器 -->
+		<div ng-view>
+			
+		</div>
+
+		<!-- footer部分 -->
+		<div id="footer" ng-show="rootIsFooterShow">
+			<ul>
+				<li>
+					<a href="#/buy">
+					<span class="sp_pic1"></span>
+					<div class="sp_name">买票</div>
+					</a>
+				</li>
+				<li>
+					<a href="#/all">
+						<span class="sp_pic2"></span>
+						<div class="sp_name">全部</div>
+					</a>
+				</li>
+				<li>
+					<a href="#/mine">
+						<span class="sp_pic3"></span>
+						<div class="sp_name">我的</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="lib/flexible.js" ></script>
+		<script type="text/javascript" src="lib/jquery.js"></script>
+		<script type="text/javascript" src="lib/angular.min.js" ></script>
+		<script type="text/javascript" src="lib/angular-css.js" ></script>
+		<script type="text/javascript" src="lib/angular-route.js" ></script>
+		<script type="text/javascript" src="app.js" ></script>
+		<script type="text/javascript" src="js/services.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+		<script type="text/javascript" src="lib/swiper-3.3.1.min.js"></script>
+	</body>
+</html>

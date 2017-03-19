@@ -1,0 +1,78 @@
+<div class="shop">
+	<!-- 头部 -->
+	<div class="s_piaoInfo">
+		<div class="s_piaoArr">
+			<div class="s_piaoDate">{{ shopCtrl.person.date }}</div>
+			<div class="s_piaoTime">{{ shopCtrl.person.week }}<br>{{ shopCtrl.person.time }}</div>
+		</div>
+		<div class="s_piaoInfocon">
+			<dl>
+				<dt class="s_piaoTit">{{ shopCtrl.person.tit }}</dt>
+				<dd class="s_piaoDdrow">
+					<div class="s_piaoAddr">
+						<span class="s_piao_pic1"></span>
+						{{ shopCtrl.person.addr }}
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- 空隔 -->
+	<div class="s_greyhr"></div>
+	<!-- 主体内容 -->
+	<div class="s_main">
+		<div class="s_box">
+			<ul class="s_box_list">
+				<li>
+					<span class="s_lt">售价</span>
+					<span class="s_r">
+						<span class="s_r_old">(原价￥{{ shopCtrl.person.old }})</span>
+						<span class="s_r_new">{{ shopCtrl.person.price }}</span>
+					</span>
+				</li>
+				<li>
+					<span class="s_lt">区域</span>
+					<span class="s_r">择优选座</span>
+				</li>
+				<li>
+					<span class="s_lt">说明</span>
+					<span class="s_r">连座</span>
+				</li>
+				<li>
+					<span class="s_lt">数量</span>
+					<span class="s_r">
+						<select class="s_form">
+							<option value="selected">请选择</option>
+							<option value="1">1张</option>
+							<option value="2">2张</option>
+							<option value="3">3张</option>
+							<option value="4">4张</option>
+							<option value="5">5张</option>
+							<option value="6">6张</option>
+						</select>
+					</span>
+				</li>
+				<li>
+					<span class="s_lt">配送方式</span>
+					<span class="s_r">
+						<select class="s_form">
+							<option value="2">现场取票</option>
+						</select>
+					</span>
+				</li>
+				<li>
+					<span class="s_lt">无票赔付</span>
+					<span class="s_r">50元/张</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 空隔 -->
+	<div class="s_greyhr"></div>
+	<!-- 文字说明 -->
+	<div class="s_text">款项由平台代收，100%安全有保障</div>
+	<!-- 提交订单 -->
+	<div class="s_roder">
+		<button class="s_roder_btn" type="submit" ng-click="shopCtrl.goBack();">提交订单</button>
+	</div>
+</div>
